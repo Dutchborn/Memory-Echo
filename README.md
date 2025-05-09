@@ -1,7 +1,5 @@
 # Memory Echo
 
-# Memory Echo
-
 Memory Echo is an ambient, interactive web app that lets users record short memories as color-coded "echoes" that float on-screen. Each memory includes:
 
 - A short reflective note (like a moment or mood)
@@ -12,6 +10,14 @@ These memories are visualized as floating orbs. Clicking an orb:
 - Plays the sound
 - Briefly displays the text
 - Creates a calming, emotional moment
+
+---
+
+## 🚀 Live Demo & Source Code
+
+- 🔗 **Live App:** [https://memory-echo-67c32.web.app](https://memory-echo-67c32.web.app)
+- 📁 **Source Code:** [https://github.com/yourusername/memory-echo](https://github.com/yourusername/memory-echo)
+
 
 ---
 
@@ -108,4 +114,3 @@ These are optional enhancements to make the Memory Echo experience more immersiv
 
 
 *This file will be updated after each phase to reflect changes and progress.*
-# Memory-Echo
