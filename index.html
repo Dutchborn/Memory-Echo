@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Echo</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Future: Add fonts or icons here -->
+</head>
+<body>
+  <!-- 🌌 Background Animation -->
+  <div class="background"></div>
+
+  <!-- 🔐 Login Screen -->
+  <div id="authScreen" class="modal">
+    <div class="modal-content">
+      <h2>Welcome to Memory Echo</h2>
+      <p>Please sign in to access your memories.</p>
+
+      <input type="email" id="emailInput" placeholder="Email" />
+      <input type="password" id="passwordInput" placeholder="Password" />
+      <button id="loginBtn">Login</button>
+      <button id="signupBtn">Sign Up</button>
+
+      <p style="margin: 10px 0;">or</p>
+
+      <button id="googleLoginBtn">Continue with Google</button>
+    </div>
+  </div>
+
+
+  <!-- 🌌 Background Container (animation later) -->
+  <div id="background"></div>
+
+  <!-- 🧠 Main Container -->
+  <div class="main-content">
+    <h1>Memory Echo</h1>
+    <p>Capture your memories with sound, color, and feeling.</p>
+    <button id="addMemoryBtn">Add a Memory</button>
+  </div>
+
+  <!-- 📝 Memory Modal (initially hidden) -->
+  <div id="memoryModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2>New Memory</h2>
+
+      <form id="memoryForm">
+        <label for="memoryText">Memory (short):</label>
+        <textarea id="memoryText" required></textarea>
+
+        <label for="colorPicker">Color:</label>
+        <input type="color" id="colorPicker" value="#FFD700" />
+
+        <label for="soundUpload">Upload Sound:</label>
+        <input type="file" id="soundUpload" accept="audio/*" />
+
+        <button type="submit">Save Memory</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 🌐 Future: Memory Display Area -->
+  <canvas id="memoryCanvas"></canvas>
+
+  <!-- 🔓 Logout Button -->
+  <button id="logoutBtn" style="position: fixed; top: 15px; right: 15px; z-index: 50;">
+  Logout
+  </button>
+
+
+  <!-- Firebase SDKs (Compat version for browser use) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+<!-- Firebase Auth SDK (Compat version for browser use) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+<!-- Your Firebase Config -->
+<script>
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDk8GLq9c5GoSzUabiXTzba_p0RvFVBnxI",
+  authDomain: "memory-echo-67c32.firebaseapp.com",
+  databaseURL: "https://memory-echo-67c32-default-rtdb.firebaseio.com",
+  projectId: "memory-echo-67c32",
+  storageBucket: "memory-echo-67c32.firebasestorage.app",
+  messagingSenderId: "364614257249",
+  appId: "1:364614257249:web:7ccda424ea205645c1b820",
+  measurementId: "G-LWXW8K1MPY"
+};
+
+  const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+  const auth = firebase.auth();
+</script>
+
+<!-- Your App's JS -->
+<script src="assets/js/script.js"></script>
+
+<!-- 🔔 Toast Message Container -->
+<div id="toast" class="toast hidden"></div>
+
+</body>
+</html>
