@@ -140,7 +140,7 @@ This document contains a **full step-by-step breakdown** of the Memory Echo proj
 ## 🔗 Final Project Links
 
 - **Live App:** https://memory-echo-67c32.web.app
-- **Source Code:** https://github.com/yourusername/memory-echo
+- **Source Code:** https://dutchborn.github.io/Memory-Echo/
 
 ---
 
