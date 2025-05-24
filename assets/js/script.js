@@ -40,12 +40,23 @@ signupBtn.addEventListener("click", () => {
 });
 
 // Google sign-in
+let isGoogleSigningIn = false;
+
 googleLoginBtn.addEventListener("click", () => {
+  if (isGoogleSigningIn) return;
+
+  isGoogleSigningIn = true;
+
   const provider = new firebase.auth.GoogleAuthProvider();
-  auth.signInWithPopup(provider).catch((err) =>
-    alert("Google sign-in failed: " + err.message)
-  );
+  auth.signInWithPopup(provider)
+    .catch((err) => {
+      alert("Google sign-in failed: " + err.message);
+    })
+    .finally(() => {
+      isGoogleSigningIn = false;
+    });
 });
+
 
 logoutBtn.addEventListener("click", () => {
   auth.signOut()
@@ -196,7 +207,6 @@ function animate() {
 }
 
 // Initial Load
-loadMemories();
 animate();
 
 // Handle orb click
