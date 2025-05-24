@@ -16,7 +16,7 @@ These memories are visualized as floating orbs. Clicking an orb:
 ## 🚀 Live Demo & Source Code
 
 - 🔗 **Live App:** [https://memory-echo-67c32.web.app](https://memory-echo-67c32.web.app)
-- 📁 **Source Code:** [https://github.com/yourusername/memory-echo](https://github.com/yourusername/memory-echo)
+- 📁 **Source Code:** [https://dutchborn.github.io/Memory-Echo/](https://dutchborn.github.io/Memory-Echo/)
 
 
 ---
